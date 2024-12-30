@@ -237,7 +237,6 @@ class UserRepository implements UserRepo {
 
        } catch (error) {
          throw new Error(error as string)
-         return []
        }
    }
   async likePost(userId: string, postId: string): Promise<boolean> {

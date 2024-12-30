@@ -446,7 +446,7 @@ class UserUseCase {
   }
   async getAllPosts(){
     const response = await this.UserRepository.getAllPost()    
-    console.log('response',response);
+    console.log('responsessss',response);
             
     if(response){
       return{

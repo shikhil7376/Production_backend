@@ -6,7 +6,7 @@ dotenv.config()
 
  const connectDB = async ()=>{
      try{
-        const mongo_uri = process.env.MONGO_URI
+        const mongo_uri = process.env.MONGO_ATLAS_URL
         if(mongo_uri){
             const connectionInstance = await mongoose.connect(mongo_uri)
             console.log(`\n MogoDB connected ! ! DB HOST: ${connectionInstance.connection.host}`);

@@ -12,7 +12,9 @@ class ChatUseCase{
    }
 
    async accessChat(currentId:string,userId:string){
-      const response = await this.chatRepository.accessChat(currentId,userId)      
+      const response = await this.chatRepository.accessChat(currentId,userId)   
+      console.log('chatrespo',response);
+         
       if(response){
         return{
             status:200,
