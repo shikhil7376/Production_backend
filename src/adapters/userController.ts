@@ -160,6 +160,8 @@ class userController {
 
   async addPost(req:Request,res:Response,next:NextFunction){
     try {  
+      console.log('add post checking');
+      
       const { userid,description} = req.body; 
       const data={id:userid,description:description}
       const images =  req.files as Express.Multer.File[];
