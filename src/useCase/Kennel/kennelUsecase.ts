@@ -360,8 +360,8 @@ class KennelUseCase {
       ],
       customer: customer.id,
       mode: "payment",
-      success_url: `http://localhost:5173/success`,
-      cancel_url: "http://localhost:5173/company",
+      success_url: `https://production-frontend-mocha.vercel.app/success`,
+      cancel_url: "https://production-frontend-mocha.vercel.app/company",
       // customer_email: email,
       billing_address_collection: "auto",
     });
