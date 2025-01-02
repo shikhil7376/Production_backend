@@ -427,6 +427,7 @@ class UserUseCase {
       "userpost"
     );
     data.image = imageUrls;
+    console.log('before repository');
     const response = await this.UserRepository.addPost(data)
      if(response){
       return {
@@ -445,9 +446,7 @@ class UserUseCase {
      }
   }
   async getAllPosts(){
-    const response = await this.UserRepository.getAllPost()    
-    console.log('responsessss',response);
-            
+    const response = await this.UserRepository.getAllPost()             
     if(response){
       return{
         status:200,

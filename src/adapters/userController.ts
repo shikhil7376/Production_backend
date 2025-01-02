@@ -164,7 +164,9 @@ class userController {
       const data={id:userid,description:description}
       const images =  req.files as Express.Multer.File[];
       const imagepath = images.map((val)=>val.path) 
+      console.log('imagepath',imagepath);
       const response = await this.userUseCase.addUserPost(data,imagepath)
+      console.log('post response',response);
       return res.status(response.status).json(response.data.message);
     } catch (error) {
       next(error);
@@ -300,7 +302,6 @@ class userController {
 
   async checkReportStatus(req:Request,res:Response,next:NextFunction){
     try {
-      console.log('hereee...');
       const {postId,userId} = req.params
       const response = await this.userUseCase.postReportStatus(postId,userId)
       return res.status(response.status).json(response.data)
